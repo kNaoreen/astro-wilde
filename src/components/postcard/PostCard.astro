@@ -1,0 +1,25 @@
+---
+
+const { post } = Astro.props;
+---
+
+<div class="card">
+    <!-- <h2>{title}</h2> -->
+    <!-- <img src={imageSrc}/> -->
+    <a href={`/blog/${post.data.slug}/`}>{post.data.title}</a>
+</div>
+
+<style>
+	.card {
+		display: flex;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        0 rgba(0,0,0,0.2);
+        min-width: 300px;
+	}
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+</style>
